@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<setupRootNode>
+    <domain>
+        <nsUri>http://org/eclipse/example/bank</nsUri>
+    </domain>
+</setupRootNode>

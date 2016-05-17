@@ -8,4 +8,5 @@ Bundle-Vendor: LOBANOVA
 Require-Bundle: org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: com.elobanova.mbdg.model.setup
+Export-Package: com.elobanova.mbdg.model.setup,
+ com.elobanova.mbdg.model.xml
