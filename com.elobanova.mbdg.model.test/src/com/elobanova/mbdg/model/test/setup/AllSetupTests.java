@@ -1,0 +1,11 @@
+package com.elobanova.mbdg.model.test.setup;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+@RunWith(Suite.class)
+@SuiteClasses({ DomainModelNodeTest.class, SetupRootNodeTest.class })
+public class AllSetupTests {
+
+}
