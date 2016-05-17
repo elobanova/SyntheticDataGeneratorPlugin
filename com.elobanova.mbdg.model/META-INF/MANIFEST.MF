@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Model Based Data Generator
+Bundle-SymbolicName: com.elobanova.mbdg.model
+Bundle-Version: 1.0.0
+Bundle-Activator: com.elobanova.mbdg.model.ModelBasedDataGeneratorPlugin
+Bundle-Vendor: LOBANOVA
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
