@@ -1,6 +1,7 @@
 package com.elobanova.mbdg.model.domain;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * A filed node defines the information for an entity's attribute to be
@@ -35,6 +36,7 @@ public class FieldNode extends TypedNode {
 	@XmlAttribute
 	private String max;
 
+	@XmlTransient
 	public String getDistribution() {
 		return this.distribution;
 	}
@@ -43,6 +45,7 @@ public class FieldNode extends TypedNode {
 		this.distribution = distribution;
 	}
 
+	@XmlTransient
 	public String getGenerator() {
 		return this.generator;
 	}
@@ -51,6 +54,7 @@ public class FieldNode extends TypedNode {
 		this.generator = generator;
 	}
 
+	@XmlTransient
 	public String getValidator() {
 		return this.validator;
 	}
@@ -59,6 +63,7 @@ public class FieldNode extends TypedNode {
 		this.validator = validator;
 	}
 
+	@XmlTransient
 	public String getConverter() {
 		return this.converter;
 	}
@@ -67,6 +72,7 @@ public class FieldNode extends TypedNode {
 		this.converter = converter;
 	}
 
+	@XmlTransient
 	public String getSource() {
 		return this.source;
 	}
@@ -75,6 +81,7 @@ public class FieldNode extends TypedNode {
 		this.source = source;
 	}
 
+	@XmlTransient
 	public String getPattern() {
 		return this.pattern;
 	}
@@ -83,6 +90,7 @@ public class FieldNode extends TypedNode {
 		this.pattern = pattern;
 	}
 
+	@XmlTransient
 	public String getMin() {
 		return this.min;
 	}
@@ -91,6 +99,7 @@ public class FieldNode extends TypedNode {
 		this.min = min;
 	}
 
+	@XmlTransient
 	public String getMax() {
 		return this.max;
 	}

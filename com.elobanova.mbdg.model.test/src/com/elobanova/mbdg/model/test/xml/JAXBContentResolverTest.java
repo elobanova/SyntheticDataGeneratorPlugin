@@ -37,7 +37,7 @@ public class JAXBContentResolverTest {
 		IWorkspace workspace = ResourcesPlugin.getWorkspace();
 		IWorkspaceRoot root = workspace.getRoot();
 		File actualFile = root.getRawLocation().append("intermediate").addFileExtension(SetupModel.FILE_EXTENSION).toFile();
-		resolver.saveSetup(rootNode, actualFile, SetupRootNode.class);
+		resolver.saveRoot(rootNode, actualFile, SetupRootNode.class);
 
 		assertTrue(XMLEqualizer.equals(expectedFile, actualFile));
 	}

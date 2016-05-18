@@ -26,6 +26,7 @@ public class GeneratorRootElement {
 	@XmlElement
 	private String comment;
 
+	@XmlTransient
 	public String getComment() {
 		return this.comment;
 	}

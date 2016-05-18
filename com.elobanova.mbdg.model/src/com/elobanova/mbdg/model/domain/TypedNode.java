@@ -1,6 +1,7 @@
 package com.elobanova.mbdg.model.domain;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * A typed node represents any node with attributes name and type.
@@ -15,6 +16,7 @@ public class TypedNode {
 	@XmlAttribute
 	private String type;
 
+	@XmlTransient
 	public String getName() {
 		return this.name;
 	}
@@ -23,6 +25,7 @@ public class TypedNode {
 		this.name = name;
 	}
 
+	@XmlTransient
 	public String getType() {
 		return this.type;
 	}

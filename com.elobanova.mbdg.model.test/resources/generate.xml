@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<setup defaultDataset="EN" defaultLocale="en_EN" defaultLineSeparator="\r\n">
+    <generate count="10000" type="Account">
+        <attribute name="balance" type="double"/>
+    </generate>
+</setup>

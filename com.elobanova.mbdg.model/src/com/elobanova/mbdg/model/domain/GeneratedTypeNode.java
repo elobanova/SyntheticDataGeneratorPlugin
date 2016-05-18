@@ -30,6 +30,7 @@ public class GeneratedTypeNode {
 	@XmlElement(name = "attribute")
 	private List<FieldNode> attributes;
 
+	@XmlTransient
 	public int getCount() {
 		return this.count;
 	}
@@ -38,6 +39,7 @@ public class GeneratedTypeNode {
 		this.count = i;
 	}
 
+	@XmlTransient
 	public String getType() {
 		return this.type;
 	}
@@ -46,6 +48,7 @@ public class GeneratedTypeNode {
 		this.type = type;
 	}
 
+	@XmlTransient
 	public String getConsumer() {
 		return this.consumer;
 	}
@@ -54,6 +57,7 @@ public class GeneratedTypeNode {
 		this.consumer = consumer;
 	}
 
+	@XmlTransient
 	public TypedNode getIdNode() {
 		return idNode;
 	}

@@ -24,7 +24,7 @@ public class SetupModel {
 	private SetupRootNode loadSetup() {
 		if (setupFile != null && setupFile.exists()) {
 			try {
-				return resolver.loadSetup(setupFile, SetupRootNode.class);
+				return resolver.loadRoot(setupFile, SetupRootNode.class);
 			} catch (JAXBException e) {
 				ModelBasedDataGeneratorPlugin.logError(NLS.bind("Error loading setup file", setupFile.getPath()),
 						ModelBasedDataGeneratorPlugin.getDefault(), e);
@@ -36,7 +36,7 @@ public class SetupModel {
 	public void save() {
 		if (setupFile != null) {
 			try {
-				resolver.saveSetup(rootNode, setupFile, SetupRootNode.class);
+				resolver.saveRoot(rootNode, setupFile, SetupRootNode.class);
 			} catch (JAXBException e) {
 				ModelBasedDataGeneratorPlugin.logError(NLS.bind("Error saving setup file", setupFile.getPath()),
 						ModelBasedDataGeneratorPlugin.getDefault(), e);
