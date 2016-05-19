@@ -16,9 +16,21 @@ public class JAXBContentResolver<T> {
 	}
 
 	public void saveRoot(T setup, File file, Class<T> clazz) throws JAXBException {
+		Marshaller marshaller = initMarschaller(clazz);
+		marshaller.marshal(setup, file);
+	}
+
+	public void saveWithParameters(T setup, File file, Class<T> clazz, RootProperty rootProperty) throws JAXBException {
+		Marshaller marshaller = initMarschaller(clazz);
+		marshaller.setProperty(Marshaller.JAXB_ENCODING, rootProperty.getEncoding());
+		marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, rootProperty.getSchemaLocation());
+		marshaller.marshal(setup, file);
+	}
+
+	private Marshaller initMarschaller(Class<T> clazz) throws JAXBException {
 		JAXBContext context = JAXBContext.newInstance(clazz);
 		Marshaller marshaller = context.createMarshaller();
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-		marshaller.marshal(setup, file);
+		return marshaller;
 	}
 }

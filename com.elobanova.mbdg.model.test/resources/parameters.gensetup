@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="Cp1251" standalone="yes"?>
+<setupRootNode xsi:schemaLocation="http://lobanova/setup.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <domain>
+        <nsUri>http://org/eclipse/example/bank</nsUri>
+    </domain>
+</setupRootNode>
