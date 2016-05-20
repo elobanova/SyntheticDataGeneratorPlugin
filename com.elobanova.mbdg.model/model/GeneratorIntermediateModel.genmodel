@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.rwth.aachen.swc.mt.mbdg.model/src" modelPluginID="com.rwth.aachen.swc.mt.mbdg.model"
+    modelName="GeneratorIntermediateModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>GeneratorIntermediateModel.ecore</foreignModel>
+  <genPackages prefix="Intermediate" disposableProviderFactory="true" ecorePackage="GeneratorIntermediateModel.ecore#/">
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//GeneratorAttributeElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorAttributeElement/useTemplate"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//GeneratorTypedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorTypedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorTypedElement/type"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//GeneratorEntityElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorEntityElement/count"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//GeneratorEntityElement/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorEntityElement/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//GeneratorEntityElement/idNode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorEntityElement/consumer"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//EntitiesContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//EntitiesContainer/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//ModelRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//ModelRoot/entitiesContainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//ModelRoot/templateAttributesContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//TemplateAttributesContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//TemplateAttributesContainer/templateAttribute"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="GeneratorIntermediateModel.ecore#//IAttributeElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/generator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/validator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/converter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/distribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//IAttributeElement/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//TemplateAttributeElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//TemplateAttributeElement/templateName"/>
+    </genClasses>
+    <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//IdNode"/>
+  </genPackages>
+</genmodel:GenModel>
