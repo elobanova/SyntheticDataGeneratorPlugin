@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: UI plugin for Data Generator
-Bundle-SymbolicName: com.elobanova.mbdg.ui
+Bundle-SymbolicName: com.elobanova.mbdg.ui;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-Vendor: ELOBANOVA
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
