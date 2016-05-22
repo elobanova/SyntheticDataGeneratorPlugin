@@ -368,7 +368,7 @@ public class TemplateAttributeElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return MBDGIntermediateModelEditPlugin.INSTANCE;
+		return GeneratorIntermediateModelEditPlugin.INSTANCE;
 	}
 
 }

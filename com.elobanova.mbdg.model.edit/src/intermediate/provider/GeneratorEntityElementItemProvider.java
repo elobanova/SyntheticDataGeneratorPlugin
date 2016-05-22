@@ -150,6 +150,7 @@ public class GeneratorEntityElementItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IntermediatePackage.Literals.GENERATOR_ENTITY_ELEMENT__ATTRIBUTE);
 			childrenFeatures.add(IntermediatePackage.Literals.GENERATOR_ENTITY_ELEMENT__ID_NODE);
+			childrenFeatures.add(IntermediatePackage.Literals.GENERATOR_ENTITY_ELEMENT__REFERENCE);
 		}
 		return childrenFeatures;
 	}
@@ -210,6 +211,7 @@ public class GeneratorEntityElementItemProvider
 				return;
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__ATTRIBUTE:
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__ID_NODE:
+			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,6 +238,11 @@ public class GeneratorEntityElementItemProvider
 			(createChildParameter
 				(IntermediatePackage.Literals.GENERATOR_ENTITY_ELEMENT__ID_NODE,
 				 IntermediateFactory.eINSTANCE.createIdNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IntermediatePackage.Literals.GENERATOR_ENTITY_ELEMENT__REFERENCE,
+				 IntermediateFactory.eINSTANCE.createGeneratorReference()));
 	}
 
 	/**
@@ -246,7 +253,7 @@ public class GeneratorEntityElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return MBDGIntermediateModelEditPlugin.INSTANCE;
+		return GeneratorIntermediateModelEditPlugin.INSTANCE;
 	}
 
 }

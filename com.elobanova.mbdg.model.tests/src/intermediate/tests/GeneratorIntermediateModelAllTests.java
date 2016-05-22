@@ -9,11 +9,11 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>MBDGIntermediateModel</b></em>' model.
+ * A test suite for the '<em><b>GeneratorIntermediateModel</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public class MBDGIntermediateModelAllTests extends TestSuite {
+public class GeneratorIntermediateModelAllTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ public class MBDGIntermediateModelAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new MBDGIntermediateModelAllTests("MBDGIntermediateModel Tests");
+		TestSuite suite = new GeneratorIntermediateModelAllTests("GeneratorIntermediateModel Tests");
 		return suite;
 	}
 
@@ -39,8 +39,8 @@ public class MBDGIntermediateModelAllTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MBDGIntermediateModelAllTests(String name) {
+	public GeneratorIntermediateModelAllTests(String name) {
 		super(name);
 	}
 
-} //MBDGIntermediateModelAllTests
+} //GeneratorIntermediateModelAllTests

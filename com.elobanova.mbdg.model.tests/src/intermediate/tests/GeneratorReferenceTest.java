@@ -2,7 +2,7 @@
  */
 package intermediate.tests;
 
-import intermediate.GeneratorTypedElement;
+import intermediate.GeneratorReference;
 import intermediate.IntermediateFactory;
 
 import junit.framework.TestCase;
@@ -11,19 +11,19 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Generator Typed Element</b></em>'.
+ * A test case for the model object '<em><b>Generator Reference</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class GeneratorTypedElementTest extends TestCase {
+public class GeneratorReferenceTest extends TestCase {
 
 	/**
-	 * The fixture for this Generator Typed Element test case.
+	 * The fixture for this Generator Reference test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GeneratorTypedElement fixture = null;
+	protected GeneratorReference fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,36 +31,36 @@ public class GeneratorTypedElementTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(GeneratorTypedElementTest.class);
+		TestRunner.run(GeneratorReferenceTest.class);
 	}
 
 	/**
-	 * Constructs a new Generator Typed Element test case with the given name.
+	 * Constructs a new Generator Reference test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GeneratorTypedElementTest(String name) {
+	public GeneratorReferenceTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this Generator Typed Element test case.
+	 * Sets the fixture for this Generator Reference test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(GeneratorTypedElement fixture) {
+	protected void setFixture(GeneratorReference fixture) {
 		this.fixture = fixture;
 	}
 
 	/**
-	 * Returns the fixture for this Generator Typed Element test case.
+	 * Returns the fixture for this Generator Reference test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GeneratorTypedElement getFixture() {
+	protected GeneratorReference getFixture() {
 		return fixture;
 	}
 
@@ -72,7 +72,7 @@ public class GeneratorTypedElementTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(IntermediateFactory.eINSTANCE.createGeneratorTypedElement());
+		setFixture(IntermediateFactory.eINSTANCE.createGeneratorReference());
 	}
 
 	/**
@@ -86,4 +86,4 @@ public class GeneratorTypedElementTest extends TestCase {
 		setFixture(null);
 	}
 
-} //GeneratorTypedElementTest
+} //GeneratorReferenceTest

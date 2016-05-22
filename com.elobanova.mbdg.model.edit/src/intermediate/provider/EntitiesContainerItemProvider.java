@@ -162,7 +162,7 @@ public class EntitiesContainerItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return MBDGIntermediateModelEditPlugin.INSTANCE;
+		return GeneratorIntermediateModelEditPlugin.INSTANCE;
 	}
 
 }

@@ -95,29 +95,6 @@ public class IntermediateItemProviderAdapterFactory extends IntermediateAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link intermediate.GeneratorTypedElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GeneratorTypedElementItemProvider generatorTypedElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link intermediate.GeneratorTypedElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGeneratorTypedElementAdapter() {
-		if (generatorTypedElementItemProvider == null) {
-			generatorTypedElementItemProvider = new GeneratorTypedElementItemProvider(this);
-		}
-
-		return generatorTypedElementItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link intermediate.GeneratorEntityElement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,6 +233,29 @@ public class IntermediateItemProviderAdapterFactory extends IntermediateAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link intermediate.GeneratorReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GeneratorReferenceItemProvider generatorReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link intermediate.GeneratorReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGeneratorReferenceAdapter() {
+		if (generatorReferenceItemProvider == null) {
+			generatorReferenceItemProvider = new GeneratorReferenceItemProvider(this);
+		}
+
+		return generatorReferenceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -355,13 +355,13 @@ public class IntermediateItemProviderAdapterFactory extends IntermediateAdapterF
 	 */
 	public void dispose() {
 		if (generatorAttributeElementItemProvider != null) generatorAttributeElementItemProvider.dispose();
-		if (generatorTypedElementItemProvider != null) generatorTypedElementItemProvider.dispose();
 		if (generatorEntityElementItemProvider != null) generatorEntityElementItemProvider.dispose();
 		if (entitiesContainerItemProvider != null) entitiesContainerItemProvider.dispose();
 		if (modelRootItemProvider != null) modelRootItemProvider.dispose();
 		if (templateAttributesContainerItemProvider != null) templateAttributesContainerItemProvider.dispose();
 		if (templateAttributeElementItemProvider != null) templateAttributeElementItemProvider.dispose();
 		if (idNodeItemProvider != null) idNodeItemProvider.dispose();
+		if (generatorReferenceItemProvider != null) generatorReferenceItemProvider.dispose();
 	}
 
 }

@@ -1,28 +1,26 @@
 /**
  */
-package intermediate.presentation;
+package intermediate.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
-import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the MBDGIntermediateModel editor plugin.
+ * This is the central singleton for the GeneratorIntermediateModel edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class MBDGIntermediateModelEditorPlugin extends EMFPlugin {
+public final class GeneratorIntermediateModelEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final MBDGIntermediateModelEditorPlugin INSTANCE = new MBDGIntermediateModelEditorPlugin();
-	
+	public static final GeneratorIntermediateModelEditPlugin INSTANCE = new GeneratorIntermediateModelEditPlugin();
+
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -37,10 +35,10 @@ public final class MBDGIntermediateModelEditorPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MBDGIntermediateModelEditorPlugin() {
+	public GeneratorIntermediateModelEditPlugin() {
 		super
-			(new ResourceLocator [] {
-			});
+		  (new ResourceLocator [] {
+		   });
 	}
 
 	/**
@@ -54,7 +52,7 @@ public final class MBDGIntermediateModelEditorPlugin extends EMFPlugin {
 	public ResourceLocator getPluginResourceLocator() {
 		return plugin;
 	}
-	
+
 	/**
 	 * Returns the singleton instance of the Eclipse plugin.
 	 * <!-- begin-user-doc -->
@@ -65,14 +63,14 @@ public final class MBDGIntermediateModelEditorPlugin extends EMFPlugin {
 	public static Implementation getPlugin() {
 		return plugin;
 	}
-	
+
 	/**
 	 * The actual implementation of the Eclipse <b>Plugin</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Implementation extends EclipseUIPlugin {
+	public static class Implementation extends EclipsePlugin {
 		/**
 		 * Creates an instance.
 		 * <!-- begin-user-doc -->
@@ -81,7 +79,7 @@ public final class MBDGIntermediateModelEditorPlugin extends EMFPlugin {
 		 */
 		public Implementation() {
 			super();
-	
+
 			// Remember the static instance.
 			//
 			plugin = this;

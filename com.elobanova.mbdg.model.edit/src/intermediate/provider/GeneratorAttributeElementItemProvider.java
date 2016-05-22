@@ -285,9 +285,9 @@ public class GeneratorAttributeElementItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_GeneratorTypedElement_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GeneratorTypedElement_name_feature", "_UI_GeneratorTypedElement_type"),
-				 IntermediatePackage.Literals.GENERATOR_TYPED_ELEMENT__NAME,
+				 getString("_UI_IGeneratorTypedElement_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IGeneratorTypedElement_name_feature", "_UI_IGeneratorTypedElement_type"),
+				 IntermediatePackage.Literals.IGENERATOR_TYPED_ELEMENT__NAME,
 				 true,
 				 false,
 				 false,
@@ -307,9 +307,9 @@ public class GeneratorAttributeElementItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_GeneratorTypedElement_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GeneratorTypedElement_type_feature", "_UI_GeneratorTypedElement_type"),
-				 IntermediatePackage.Literals.GENERATOR_TYPED_ELEMENT__TYPE,
+				 getString("_UI_IGeneratorTypedElement_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IGeneratorTypedElement_type_feature", "_UI_IGeneratorTypedElement_type"),
+				 IntermediatePackage.Literals.IGENERATOR_TYPED_ELEMENT__TYPE,
 				 true,
 				 false,
 				 false,
@@ -416,7 +416,7 @@ public class GeneratorAttributeElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return MBDGIntermediateModelEditPlugin.INSTANCE;
+		return GeneratorIntermediateModelEditPlugin.INSTANCE;
 	}
 
 }

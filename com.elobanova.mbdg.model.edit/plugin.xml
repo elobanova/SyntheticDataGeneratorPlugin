@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated MBDGIntermediateModel -->
+      <!-- @generated GeneratorIntermediateModel -->
       <factory
             uri="http://com/elobanova/mbdg/intermediate"
             class="intermediate.provider.IntermediateItemProviderAdapterFactory"

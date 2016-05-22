@@ -530,7 +530,7 @@ public class IntermediateEditor
 					}
 				}
 				catch (CoreException exception) {
-					MBDGIntermediateModelEditorPlugin.INSTANCE.log(exception);
+					GeneratorIntermediateModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -646,7 +646,7 @@ public class IntermediateEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					MBDGIntermediateModelEditorPlugin.INSTANCE.log(exception);
+					GeneratorIntermediateModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -657,7 +657,7 @@ public class IntermediateEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						MBDGIntermediateModelEditorPlugin.INSTANCE.log(exception);
+						GeneratorIntermediateModelEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -1523,7 +1523,7 @@ public class IntermediateEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			MBDGIntermediateModelEditorPlugin.INSTANCE.log(exception);
+			GeneratorIntermediateModelEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1727,7 +1727,7 @@ public class IntermediateEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return MBDGIntermediateModelEditorPlugin.INSTANCE.getString(key);
+		return GeneratorIntermediateModelEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1737,7 +1737,7 @@ public class IntermediateEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return MBDGIntermediateModelEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return GeneratorIntermediateModelEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

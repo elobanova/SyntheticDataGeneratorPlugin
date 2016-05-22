@@ -162,7 +162,7 @@ public class TemplateAttributesContainerItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return MBDGIntermediateModelEditPlugin.INSTANCE;
+		return GeneratorIntermediateModelEditPlugin.INSTANCE;
 	}
 
 }
