@@ -302,14 +302,14 @@ public interface IntermediatePackage extends EPackage {
 	int GENERATOR_ATTRIBUTE_ELEMENT_OPERATION_COUNT = IATTRIBUTE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link intermediate.impl.GeneratorTypedElementImpl <em>Generator Typed Element</em>}' class.
+	 * The meta object id for the '{@link intermediate.IGeneratorTypedElement <em>IGenerator Typed Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see intermediate.impl.GeneratorTypedElementImpl
-	 * @see intermediate.impl.IntermediatePackageImpl#getGeneratorTypedElement()
+	 * @see intermediate.IGeneratorTypedElement
+	 * @see intermediate.impl.IntermediatePackageImpl#getIGeneratorTypedElement()
 	 * @generated
 	 */
-	int GENERATOR_TYPED_ELEMENT = 1;
+	int IGENERATOR_TYPED_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -318,7 +318,7 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_TYPED_ELEMENT__NAME = 0;
+	int IGENERATOR_TYPED_ELEMENT__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -327,25 +327,25 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_TYPED_ELEMENT__TYPE = 1;
+	int IGENERATOR_TYPED_ELEMENT__TYPE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Generator Typed Element</em>' class.
+	 * The number of structural features of the '<em>IGenerator Typed Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_TYPED_ELEMENT_FEATURE_COUNT = 2;
+	int IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Generator Typed Element</em>' class.
+	 * The number of operations of the '<em>IGenerator Typed Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_TYPED_ELEMENT_OPERATION_COUNT = 0;
+	int IGENERATOR_TYPED_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link intermediate.impl.GeneratorEntityElementImpl <em>Generator Entity Element</em>}' class.
@@ -403,13 +403,22 @@ public interface IntermediatePackage extends EPackage {
 	int GENERATOR_ENTITY_ELEMENT__CONSUMER = 4;
 
 	/**
+	 * The feature id for the '<em><b>Reference</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_ENTITY_ELEMENT__REFERENCE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Generator Entity Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_ENTITY_ELEMENT_FEATURE_COUNT = 5;
+	int GENERATOR_ENTITY_ELEMENT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Generator Entity Element</em>' class.
@@ -675,7 +684,7 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ID_NODE__NAME = GENERATOR_TYPED_ELEMENT__NAME;
+	int ID_NODE__NAME = IGENERATOR_TYPED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -684,7 +693,88 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ID_NODE__TYPE = GENERATOR_TYPED_ELEMENT__TYPE;
+	int ID_NODE__TYPE = IGENERATOR_TYPED_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Pattern</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__PATTERN = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Min</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__MIN = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Max</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__MAX = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Generator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__GENERATOR = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Validator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__VALIDATOR = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Converter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__CONVERTER = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__SOURCE = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__DISTRIBUTION = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID_NODE__FILTER = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Id Node</em>' class.
@@ -693,7 +783,7 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ID_NODE_FEATURE_COUNT = GENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 0;
+	int ID_NODE_FEATURE_COUNT = IGENERATOR_TYPED_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Id Node</em>' class.
@@ -702,7 +792,44 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ID_NODE_OPERATION_COUNT = GENERATOR_TYPED_ELEMENT_OPERATION_COUNT + 0;
+	int ID_NODE_OPERATION_COUNT = IGENERATOR_TYPED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link intermediate.impl.GeneratorReferenceImpl <em>Generator Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see intermediate.impl.GeneratorReferenceImpl
+	 * @see intermediate.impl.IntermediatePackageImpl#getGeneratorReference()
+	 * @generated
+	 */
+	int GENERATOR_REFERENCE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Generator Entity Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Generator Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_REFERENCE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Generator Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_REFERENCE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -727,36 +854,36 @@ public interface IntermediatePackage extends EPackage {
 	EAttribute getGeneratorAttributeElement_UseTemplate();
 
 	/**
-	 * Returns the meta object for class '{@link intermediate.GeneratorTypedElement <em>Generator Typed Element</em>}'.
+	 * Returns the meta object for class '{@link intermediate.IGeneratorTypedElement <em>IGenerator Typed Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Generator Typed Element</em>'.
-	 * @see intermediate.GeneratorTypedElement
+	 * @return the meta object for class '<em>IGenerator Typed Element</em>'.
+	 * @see intermediate.IGeneratorTypedElement
 	 * @generated
 	 */
-	EClass getGeneratorTypedElement();
+	EClass getIGeneratorTypedElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link intermediate.GeneratorTypedElement#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link intermediate.IGeneratorTypedElement#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see intermediate.GeneratorTypedElement#getName()
-	 * @see #getGeneratorTypedElement()
+	 * @see intermediate.IGeneratorTypedElement#getName()
+	 * @see #getIGeneratorTypedElement()
 	 * @generated
 	 */
-	EAttribute getGeneratorTypedElement_Name();
+	EAttribute getIGeneratorTypedElement_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link intermediate.GeneratorTypedElement#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link intermediate.IGeneratorTypedElement#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see intermediate.GeneratorTypedElement#getType()
-	 * @see #getGeneratorTypedElement()
+	 * @see intermediate.IGeneratorTypedElement#getType()
+	 * @see #getIGeneratorTypedElement()
 	 * @generated
 	 */
-	EAttribute getGeneratorTypedElement_Type();
+	EAttribute getIGeneratorTypedElement_Type();
 
 	/**
 	 * Returns the meta object for class '{@link intermediate.GeneratorEntityElement <em>Generator Entity Element</em>}'.
@@ -822,6 +949,17 @@ public interface IntermediatePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGeneratorEntityElement_Consumer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link intermediate.GeneratorEntityElement#getReference <em>Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Reference</em>'.
+	 * @see intermediate.GeneratorEntityElement#getReference()
+	 * @see #getGeneratorEntityElement()
+	 * @generated
+	 */
+	EReference getGeneratorEntityElement_Reference();
 
 	/**
 	 * Returns the meta object for class '{@link intermediate.EntitiesContainer <em>Entities Container</em>}'.
@@ -1038,6 +1176,27 @@ public interface IntermediatePackage extends EPackage {
 	EClass getIdNode();
 
 	/**
+	 * Returns the meta object for class '{@link intermediate.GeneratorReference <em>Generator Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generator Reference</em>'.
+	 * @see intermediate.GeneratorReference
+	 * @generated
+	 */
+	EClass getGeneratorReference();
+
+	/**
+	 * Returns the meta object for the reference '{@link intermediate.GeneratorReference#getGeneratorEntityElement <em>Generator Entity Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Generator Entity Element</em>'.
+	 * @see intermediate.GeneratorReference#getGeneratorEntityElement()
+	 * @see #getGeneratorReference()
+	 * @generated
+	 */
+	EReference getGeneratorReference_GeneratorEntityElement();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1079,14 +1238,14 @@ public interface IntermediatePackage extends EPackage {
 		EAttribute GENERATOR_ATTRIBUTE_ELEMENT__USE_TEMPLATE = eINSTANCE.getGeneratorAttributeElement_UseTemplate();
 
 		/**
-		 * The meta object literal for the '{@link intermediate.impl.GeneratorTypedElementImpl <em>Generator Typed Element</em>}' class.
+		 * The meta object literal for the '{@link intermediate.IGeneratorTypedElement <em>IGenerator Typed Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see intermediate.impl.GeneratorTypedElementImpl
-		 * @see intermediate.impl.IntermediatePackageImpl#getGeneratorTypedElement()
+		 * @see intermediate.IGeneratorTypedElement
+		 * @see intermediate.impl.IntermediatePackageImpl#getIGeneratorTypedElement()
 		 * @generated
 		 */
-		EClass GENERATOR_TYPED_ELEMENT = eINSTANCE.getGeneratorTypedElement();
+		EClass IGENERATOR_TYPED_ELEMENT = eINSTANCE.getIGeneratorTypedElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1094,7 +1253,7 @@ public interface IntermediatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GENERATOR_TYPED_ELEMENT__NAME = eINSTANCE.getGeneratorTypedElement_Name();
+		EAttribute IGENERATOR_TYPED_ELEMENT__NAME = eINSTANCE.getIGeneratorTypedElement_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -1102,7 +1261,7 @@ public interface IntermediatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GENERATOR_TYPED_ELEMENT__TYPE = eINSTANCE.getGeneratorTypedElement_Type();
+		EAttribute IGENERATOR_TYPED_ELEMENT__TYPE = eINSTANCE.getIGeneratorTypedElement_Type();
 
 		/**
 		 * The meta object literal for the '{@link intermediate.impl.GeneratorEntityElementImpl <em>Generator Entity Element</em>}' class.
@@ -1153,6 +1312,14 @@ public interface IntermediatePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GENERATOR_ENTITY_ELEMENT__CONSUMER = eINSTANCE.getGeneratorEntityElement_Consumer();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENERATOR_ENTITY_ELEMENT__REFERENCE = eINSTANCE.getGeneratorEntityElement_Reference();
 
 		/**
 		 * The meta object literal for the '{@link intermediate.impl.EntitiesContainerImpl <em>Entities Container</em>}' class.
@@ -1325,6 +1492,24 @@ public interface IntermediatePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ID_NODE = eINSTANCE.getIdNode();
+
+		/**
+		 * The meta object literal for the '{@link intermediate.impl.GeneratorReferenceImpl <em>Generator Reference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see intermediate.impl.GeneratorReferenceImpl
+		 * @see intermediate.impl.IntermediatePackageImpl#getGeneratorReference()
+		 * @generated
+		 */
+		EClass GENERATOR_REFERENCE = eINSTANCE.getGeneratorReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Generator Entity Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT = eINSTANCE.getGeneratorReference_GeneratorEntityElement();
 
 	}
 

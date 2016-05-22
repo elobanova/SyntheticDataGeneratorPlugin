@@ -2,10 +2,11 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="intermediate" nsURI="http://com/elobanova/mbdg/intermediate"
     nsPrefix="com.elobanova.mbdg.intermediate">
-  <eClassifiers xsi:type="ecore:EClass" name="GeneratorAttributeElement" eSuperTypes="#//IAttributeElement #//GeneratorTypedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="GeneratorAttributeElement" eSuperTypes="#//IAttributeElement #//IGeneratorTypedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useTemplate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GeneratorTypedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="IGeneratorTypedElement" abstract="true"
+      interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -17,6 +18,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="idNode" eType="#//IdNode"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="consumer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" upperBound="-1"
+        eType="#//GeneratorReference" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntitiesContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
@@ -46,5 +49,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="TemplateAttributeElement" eSuperTypes="#//IAttributeElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IdNode" eSuperTypes="#//GeneratorTypedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IdNode" eSuperTypes="#//IGeneratorTypedElement #//IAttributeElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneratorReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorEntityElement"
+        lowerBound="1" eType="#//GeneratorEntityElement"/>
+  </eClassifiers>
 </ecore:EPackage>

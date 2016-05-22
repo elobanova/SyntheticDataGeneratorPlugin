@@ -70,13 +70,13 @@ public class IntermediateSwitch<T> extends Switch<T> {
 				GeneratorAttributeElement generatorAttributeElement = (GeneratorAttributeElement)theEObject;
 				T result = caseGeneratorAttributeElement(generatorAttributeElement);
 				if (result == null) result = caseIAttributeElement(generatorAttributeElement);
-				if (result == null) result = caseGeneratorTypedElement(generatorAttributeElement);
+				if (result == null) result = caseIGeneratorTypedElement(generatorAttributeElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IntermediatePackage.GENERATOR_TYPED_ELEMENT: {
-				GeneratorTypedElement generatorTypedElement = (GeneratorTypedElement)theEObject;
-				T result = caseGeneratorTypedElement(generatorTypedElement);
+			case IntermediatePackage.IGENERATOR_TYPED_ELEMENT: {
+				IGeneratorTypedElement iGeneratorTypedElement = (IGeneratorTypedElement)theEObject;
+				T result = caseIGeneratorTypedElement(iGeneratorTypedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,7 +120,14 @@ public class IntermediateSwitch<T> extends Switch<T> {
 			case IntermediatePackage.ID_NODE: {
 				IdNode idNode = (IdNode)theEObject;
 				T result = caseIdNode(idNode);
-				if (result == null) result = caseGeneratorTypedElement(idNode);
+				if (result == null) result = caseIGeneratorTypedElement(idNode);
+				if (result == null) result = caseIAttributeElement(idNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IntermediatePackage.GENERATOR_REFERENCE: {
+				GeneratorReference generatorReference = (GeneratorReference)theEObject;
+				T result = caseGeneratorReference(generatorReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -144,17 +151,17 @@ public class IntermediateSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generator Typed Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>IGenerator Typed Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generator Typed Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>IGenerator Typed Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGeneratorTypedElement(GeneratorTypedElement object) {
+	public T caseIGeneratorTypedElement(IGeneratorTypedElement object) {
 		return null;
 	}
 
@@ -260,6 +267,21 @@ public class IntermediateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdNode(IdNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generator Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generator Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeneratorReference(GeneratorReference object) {
 		return null;
 	}
 

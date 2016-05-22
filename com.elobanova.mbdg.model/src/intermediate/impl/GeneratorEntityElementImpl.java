@@ -4,6 +4,7 @@ package intermediate.impl;
 
 import intermediate.GeneratorAttributeElement;
 import intermediate.GeneratorEntityElement;
+import intermediate.GeneratorReference;
 import intermediate.IdNode;
 import intermediate.IntermediatePackage;
 
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link intermediate.impl.GeneratorEntityElementImpl#getType <em>Type</em>}</li>
  *   <li>{@link intermediate.impl.GeneratorEntityElementImpl#getIdNode <em>Id Node</em>}</li>
  *   <li>{@link intermediate.impl.GeneratorEntityElementImpl#getConsumer <em>Consumer</em>}</li>
+ *   <li>{@link intermediate.impl.GeneratorEntityElementImpl#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @generated
@@ -120,6 +122,16 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected String consumer = CONSUMER_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getReference() <em>Reference</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReference()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GeneratorReference> reference;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,6 +275,18 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GeneratorReference> getReference() {
+		if (reference == null) {
+			reference = new EObjectContainmentEList<GeneratorReference>(GeneratorReference.class, this, IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE);
+		}
+		return reference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -270,6 +294,8 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 				return ((InternalEList<?>)getAttribute()).basicRemove(otherEnd, msgs);
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__ID_NODE:
 				return basicSetIdNode(null, msgs);
+			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE:
+				return ((InternalEList<?>)getReference()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,6 +318,8 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 				return getIdNode();
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__CONSUMER:
 				return getConsumer();
+			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE:
+				return getReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -321,6 +349,10 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__CONSUMER:
 				setConsumer((String)newValue);
 				return;
+			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE:
+				getReference().clear();
+				getReference().addAll((Collection<? extends GeneratorReference>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -348,6 +380,9 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__CONSUMER:
 				setConsumer(CONSUMER_EDEFAULT);
 				return;
+			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE:
+				getReference().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -370,6 +405,8 @@ public class GeneratorEntityElementImpl extends MinimalEObjectImpl.Container imp
 				return idNode != null;
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__CONSUMER:
 				return CONSUMER_EDEFAULT == null ? consumer != null : !CONSUMER_EDEFAULT.equals(consumer);
+			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT__REFERENCE:
+				return reference != null && !reference.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -3,7 +3,7 @@
 package intermediate.impl;
 
 import intermediate.GeneratorAttributeElement;
-import intermediate.GeneratorTypedElement;
+import intermediate.IGeneratorTypedElement;
 import intermediate.IntermediatePackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -724,10 +724,10 @@ public class GeneratorAttributeElementImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == GeneratorTypedElement.class) {
+		if (baseClass == IGeneratorTypedElement.class) {
 			switch (derivedFeatureID) {
-				case IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__NAME: return IntermediatePackage.GENERATOR_TYPED_ELEMENT__NAME;
-				case IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__TYPE: return IntermediatePackage.GENERATOR_TYPED_ELEMENT__TYPE;
+				case IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__NAME: return IntermediatePackage.IGENERATOR_TYPED_ELEMENT__NAME;
+				case IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__TYPE: return IntermediatePackage.IGENERATOR_TYPED_ELEMENT__TYPE;
 				default: return -1;
 			}
 		}
@@ -741,10 +741,10 @@ public class GeneratorAttributeElementImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == GeneratorTypedElement.class) {
+		if (baseClass == IGeneratorTypedElement.class) {
 			switch (baseFeatureID) {
-				case IntermediatePackage.GENERATOR_TYPED_ELEMENT__NAME: return IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__NAME;
-				case IntermediatePackage.GENERATOR_TYPED_ELEMENT__TYPE: return IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__TYPE;
+				case IntermediatePackage.IGENERATOR_TYPED_ELEMENT__NAME: return IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__NAME;
+				case IntermediatePackage.IGENERATOR_TYPED_ELEMENT__TYPE: return IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT__TYPE;
 				default: return -1;
 			}
 		}

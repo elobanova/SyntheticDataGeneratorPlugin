@@ -6,22 +6,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Generator Typed Element</b></em>'.
+ * A representation of the model object '<em><b>IGenerator Typed Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link intermediate.GeneratorTypedElement#getName <em>Name</em>}</li>
- *   <li>{@link intermediate.GeneratorTypedElement#getType <em>Type</em>}</li>
+ *   <li>{@link intermediate.IGeneratorTypedElement#getName <em>Name</em>}</li>
+ *   <li>{@link intermediate.IGeneratorTypedElement#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see intermediate.IntermediatePackage#getGeneratorTypedElement()
- * @model
+ * @see intermediate.IntermediatePackage#getIGeneratorTypedElement()
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface GeneratorTypedElement extends EObject {
+public interface IGeneratorTypedElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -32,14 +32,14 @@ public interface GeneratorTypedElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see intermediate.IntermediatePackage#getGeneratorTypedElement_Name()
+	 * @see intermediate.IntermediatePackage#getIGeneratorTypedElement_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link intermediate.GeneratorTypedElement#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link intermediate.IGeneratorTypedElement#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -58,14 +58,14 @@ public interface GeneratorTypedElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see intermediate.IntermediatePackage#getGeneratorTypedElement_Type()
+	 * @see intermediate.IntermediatePackage#getIGeneratorTypedElement_Type()
 	 * @model
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link intermediate.GeneratorTypedElement#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link intermediate.IGeneratorTypedElement#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
@@ -74,4 +74,4 @@ public interface GeneratorTypedElement extends EObject {
 	 */
 	void setType(String value);
 
-} // GeneratorTypedElement
+} // IGeneratorTypedElement

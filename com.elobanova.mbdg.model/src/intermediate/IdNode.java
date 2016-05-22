@@ -13,5 +13,5 @@ package intermediate;
  * @model
  * @generated
  */
-public interface IdNode extends GeneratorTypedElement {
+public interface IdNode extends IGeneratorTypedElement, IAttributeElement {
 } // IdNode

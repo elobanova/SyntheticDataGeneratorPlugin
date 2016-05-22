@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link intermediate.GeneratorEntityElement#getType <em>Type</em>}</li>
  *   <li>{@link intermediate.GeneratorEntityElement#getIdNode <em>Id Node</em>}</li>
  *   <li>{@link intermediate.GeneratorEntityElement#getConsumer <em>Consumer</em>}</li>
+ *   <li>{@link intermediate.GeneratorEntityElement#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @see intermediate.IntermediatePackage#getGeneratorEntityElement()
@@ -146,5 +147,21 @@ public interface GeneratorEntityElement extends EObject {
 	 * @generated
 	 */
 	void setConsumer(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reference</b></em>' containment reference list.
+	 * The list contents are of type {@link intermediate.GeneratorReference}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Reference</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reference</em>' containment reference list.
+	 * @see intermediate.IntermediatePackage#getGeneratorEntityElement_Reference()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GeneratorReference> getReference();
 
 } // GeneratorEntityElement

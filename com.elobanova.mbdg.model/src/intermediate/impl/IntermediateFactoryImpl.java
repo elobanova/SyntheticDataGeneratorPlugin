@@ -57,13 +57,13 @@ public class IntermediateFactoryImpl extends EFactoryImpl implements Intermediat
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case IntermediatePackage.GENERATOR_ATTRIBUTE_ELEMENT: return createGeneratorAttributeElement();
-			case IntermediatePackage.GENERATOR_TYPED_ELEMENT: return createGeneratorTypedElement();
 			case IntermediatePackage.GENERATOR_ENTITY_ELEMENT: return createGeneratorEntityElement();
 			case IntermediatePackage.ENTITIES_CONTAINER: return createEntitiesContainer();
 			case IntermediatePackage.MODEL_ROOT: return createModelRoot();
 			case IntermediatePackage.TEMPLATE_ATTRIBUTES_CONTAINER: return createTemplateAttributesContainer();
 			case IntermediatePackage.TEMPLATE_ATTRIBUTE_ELEMENT: return createTemplateAttributeElement();
 			case IntermediatePackage.ID_NODE: return createIdNode();
+			case IntermediatePackage.GENERATOR_REFERENCE: return createGeneratorReference();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,16 +77,6 @@ public class IntermediateFactoryImpl extends EFactoryImpl implements Intermediat
 	public GeneratorAttributeElement createGeneratorAttributeElement() {
 		GeneratorAttributeElementImpl generatorAttributeElement = new GeneratorAttributeElementImpl();
 		return generatorAttributeElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GeneratorTypedElement createGeneratorTypedElement() {
-		GeneratorTypedElementImpl generatorTypedElement = new GeneratorTypedElementImpl();
-		return generatorTypedElement;
 	}
 
 	/**
@@ -147,6 +137,16 @@ public class IntermediateFactoryImpl extends EFactoryImpl implements Intermediat
 	public IdNode createIdNode() {
 		IdNodeImpl idNode = new IdNodeImpl();
 		return idNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeneratorReference createGeneratorReference() {
+		GeneratorReferenceImpl generatorReference = new GeneratorReferenceImpl();
+		return generatorReference;
 	}
 
 	/**

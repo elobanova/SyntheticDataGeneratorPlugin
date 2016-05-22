@@ -19,7 +19,7 @@ package intermediate;
  * @model
  * @generated
  */
-public interface GeneratorAttributeElement extends IAttributeElement, GeneratorTypedElement {
+public interface GeneratorAttributeElement extends IAttributeElement, IGeneratorTypedElement {
 	/**
 	 * Returns the value of the '<em><b>Use Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -31,15 +31,6 @@ public interface IntermediateFactory extends EFactory {
 	GeneratorAttributeElement createGeneratorAttributeElement();
 
 	/**
-	 * Returns a new object of class '<em>Generator Typed Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Generator Typed Element</em>'.
-	 * @generated
-	 */
-	GeneratorTypedElement createGeneratorTypedElement();
-
-	/**
 	 * Returns a new object of class '<em>Generator Entity Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +83,15 @@ public interface IntermediateFactory extends EFactory {
 	 * @generated
 	 */
 	IdNode createIdNode();
+
+	/**
+	 * Returns a new object of class '<em>Generator Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generator Reference</em>'.
+	 * @generated
+	 */
+	GeneratorReference createGeneratorReference();
 
 	/**
 	 * Returns the package supported by this factory.

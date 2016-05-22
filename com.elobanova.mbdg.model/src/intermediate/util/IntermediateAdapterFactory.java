@@ -72,8 +72,8 @@ public class IntermediateAdapterFactory extends AdapterFactoryImpl {
 				return createGeneratorAttributeElementAdapter();
 			}
 			@Override
-			public Adapter caseGeneratorTypedElement(GeneratorTypedElement object) {
-				return createGeneratorTypedElementAdapter();
+			public Adapter caseIGeneratorTypedElement(IGeneratorTypedElement object) {
+				return createIGeneratorTypedElementAdapter();
 			}
 			@Override
 			public Adapter caseGeneratorEntityElement(GeneratorEntityElement object) {
@@ -102,6 +102,10 @@ public class IntermediateAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIdNode(IdNode object) {
 				return createIdNodeAdapter();
+			}
+			@Override
+			public Adapter caseGeneratorReference(GeneratorReference object) {
+				return createGeneratorReferenceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -138,16 +142,16 @@ public class IntermediateAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link intermediate.GeneratorTypedElement <em>Generator Typed Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link intermediate.IGeneratorTypedElement <em>IGenerator Typed Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see intermediate.GeneratorTypedElement
+	 * @see intermediate.IGeneratorTypedElement
 	 * @generated
 	 */
-	public Adapter createGeneratorTypedElementAdapter() {
+	public Adapter createIGeneratorTypedElementAdapter() {
 		return null;
 	}
 
@@ -246,6 +250,20 @@ public class IntermediateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIdNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link intermediate.GeneratorReference <em>Generator Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see intermediate.GeneratorReference
+	 * @generated
+	 */
+	public Adapter createGeneratorReferenceAdapter() {
 		return null;
 	}
 

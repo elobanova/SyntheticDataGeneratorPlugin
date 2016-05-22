@@ -5,8 +5,9 @@ package intermediate.impl;
 import intermediate.EntitiesContainer;
 import intermediate.GeneratorAttributeElement;
 import intermediate.GeneratorEntityElement;
-import intermediate.GeneratorTypedElement;
+import intermediate.GeneratorReference;
 import intermediate.IAttributeElement;
+import intermediate.IGeneratorTypedElement;
 import intermediate.IdNode;
 import intermediate.IntermediateFactory;
 import intermediate.IntermediatePackage;
@@ -40,7 +41,7 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass generatorTypedElementEClass = null;
+	private EClass iGeneratorTypedElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,6 +91,13 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * @generated
 	 */
 	private EClass idNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass generatorReferenceEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -175,8 +183,8 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGeneratorTypedElement() {
-		return generatorTypedElementEClass;
+	public EClass getIGeneratorTypedElement() {
+		return iGeneratorTypedElementEClass;
 	}
 
 	/**
@@ -184,8 +192,8 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGeneratorTypedElement_Name() {
-		return (EAttribute)generatorTypedElementEClass.getEStructuralFeatures().get(0);
+	public EAttribute getIGeneratorTypedElement_Name() {
+		return (EAttribute)iGeneratorTypedElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -193,8 +201,8 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGeneratorTypedElement_Type() {
-		return (EAttribute)generatorTypedElementEClass.getEStructuralFeatures().get(1);
+	public EAttribute getIGeneratorTypedElement_Type() {
+		return (EAttribute)iGeneratorTypedElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -249,6 +257,15 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 */
 	public EAttribute getGeneratorEntityElement_Consumer() {
 		return (EAttribute)generatorEntityElementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeneratorEntityElement_Reference() {
+		return (EReference)generatorEntityElementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -436,6 +453,24 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGeneratorReference() {
+		return generatorReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeneratorReference_GeneratorEntityElement() {
+		return (EReference)generatorReferenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IntermediateFactory getIntermediateFactory() {
 		return (IntermediateFactory)getEFactoryInstance();
 	}
@@ -462,9 +497,9 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 		generatorAttributeElementEClass = createEClass(GENERATOR_ATTRIBUTE_ELEMENT);
 		createEAttribute(generatorAttributeElementEClass, GENERATOR_ATTRIBUTE_ELEMENT__USE_TEMPLATE);
 
-		generatorTypedElementEClass = createEClass(GENERATOR_TYPED_ELEMENT);
-		createEAttribute(generatorTypedElementEClass, GENERATOR_TYPED_ELEMENT__NAME);
-		createEAttribute(generatorTypedElementEClass, GENERATOR_TYPED_ELEMENT__TYPE);
+		iGeneratorTypedElementEClass = createEClass(IGENERATOR_TYPED_ELEMENT);
+		createEAttribute(iGeneratorTypedElementEClass, IGENERATOR_TYPED_ELEMENT__NAME);
+		createEAttribute(iGeneratorTypedElementEClass, IGENERATOR_TYPED_ELEMENT__TYPE);
 
 		generatorEntityElementEClass = createEClass(GENERATOR_ENTITY_ELEMENT);
 		createEAttribute(generatorEntityElementEClass, GENERATOR_ENTITY_ELEMENT__COUNT);
@@ -472,6 +507,7 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 		createEAttribute(generatorEntityElementEClass, GENERATOR_ENTITY_ELEMENT__TYPE);
 		createEReference(generatorEntityElementEClass, GENERATOR_ENTITY_ELEMENT__ID_NODE);
 		createEAttribute(generatorEntityElementEClass, GENERATOR_ENTITY_ELEMENT__CONSUMER);
+		createEReference(generatorEntityElementEClass, GENERATOR_ENTITY_ELEMENT__REFERENCE);
 
 		entitiesContainerEClass = createEClass(ENTITIES_CONTAINER);
 		createEReference(entitiesContainerEClass, ENTITIES_CONTAINER__ENTITIES);
@@ -498,6 +534,9 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 		createEAttribute(templateAttributeElementEClass, TEMPLATE_ATTRIBUTE_ELEMENT__TEMPLATE_NAME);
 
 		idNodeEClass = createEClass(ID_NODE);
+
+		generatorReferenceEClass = createEClass(GENERATOR_REFERENCE);
+		createEReference(generatorReferenceEClass, GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT);
 	}
 
 	/**
@@ -529,17 +568,18 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 
 		// Add supertypes to classes
 		generatorAttributeElementEClass.getESuperTypes().add(this.getIAttributeElement());
-		generatorAttributeElementEClass.getESuperTypes().add(this.getGeneratorTypedElement());
+		generatorAttributeElementEClass.getESuperTypes().add(this.getIGeneratorTypedElement());
 		templateAttributeElementEClass.getESuperTypes().add(this.getIAttributeElement());
-		idNodeEClass.getESuperTypes().add(this.getGeneratorTypedElement());
+		idNodeEClass.getESuperTypes().add(this.getIGeneratorTypedElement());
+		idNodeEClass.getESuperTypes().add(this.getIAttributeElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(generatorAttributeElementEClass, GeneratorAttributeElement.class, "GeneratorAttributeElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGeneratorAttributeElement_UseTemplate(), ecorePackage.getEString(), "useTemplate", null, 0, 1, GeneratorAttributeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(generatorTypedElementEClass, GeneratorTypedElement.class, "GeneratorTypedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeneratorTypedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, GeneratorTypedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGeneratorTypedElement_Type(), ecorePackage.getEString(), "type", null, 0, 1, GeneratorTypedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(iGeneratorTypedElementEClass, IGeneratorTypedElement.class, "IGeneratorTypedElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIGeneratorTypedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, IGeneratorTypedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIGeneratorTypedElement_Type(), ecorePackage.getEString(), "type", null, 0, 1, IGeneratorTypedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generatorEntityElementEClass, GeneratorEntityElement.class, "GeneratorEntityElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGeneratorEntityElement_Count(), ecorePackage.getEInt(), "count", null, 0, 1, GeneratorEntityElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -547,6 +587,7 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 		initEAttribute(getGeneratorEntityElement_Type(), ecorePackage.getEString(), "type", null, 0, 1, GeneratorEntityElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGeneratorEntityElement_IdNode(), this.getIdNode(), null, "idNode", null, 0, 1, GeneratorEntityElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeneratorEntityElement_Consumer(), ecorePackage.getEString(), "consumer", null, 0, 1, GeneratorEntityElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeneratorEntityElement_Reference(), this.getGeneratorReference(), null, "reference", null, 0, -1, GeneratorEntityElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entitiesContainerEClass, EntitiesContainer.class, "EntitiesContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEntitiesContainer_Entities(), this.getGeneratorEntityElement(), null, "entities", null, 0, -1, EntitiesContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -573,6 +614,9 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 		initEAttribute(getTemplateAttributeElement_TemplateName(), ecorePackage.getEString(), "templateName", null, 0, 1, TemplateAttributeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(idNodeEClass, IdNode.class, "IdNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(generatorReferenceEClass, GeneratorReference.class, "GeneratorReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGeneratorReference_GeneratorEntityElement(), this.getGeneratorEntityElement(), null, "generatorEntityElement", null, 1, 1, GeneratorReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
