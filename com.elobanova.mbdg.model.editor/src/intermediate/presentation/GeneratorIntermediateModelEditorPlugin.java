@@ -2,11 +2,15 @@
  */
 package intermediate.presentation;
 
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.jface.dialogs.ErrorDialog;
+import org.eclipse.swt.widgets.Shell;
 
 /**
  * This is the central singleton for the GeneratorIntermediateModel editor plugin.
@@ -86,6 +90,15 @@ public final class GeneratorIntermediateModelEditorPlugin extends EMFPlugin {
 			//
 			plugin = this;
 		}
+	}
+	
+	public static void logError(String bind, Shell shell, Exception e) {
+		Status status = new Status(IStatus.ERROR, "com.elobanova.mbdg.ui", e.getLocalizedMessage());
+		ErrorDialog.openError(shell, bind, "Error occured", status);
+	}
+
+	public static void logError(String bind, Shell shell) {
+		logError(bind, null);
 	}
 
 }

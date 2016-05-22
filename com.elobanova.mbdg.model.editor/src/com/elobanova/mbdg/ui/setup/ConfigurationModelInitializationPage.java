@@ -9,9 +9,9 @@ import org.eclipse.emf.importer.ImporterPlugin;
 import org.eclipse.emf.importer.ModelImporter;
 import org.eclipse.emf.importer.ui.contribution.base.ModelImporterDetailPage;
 
-public class SetupModelInitializationPage extends ModelImporterDetailPage {
+public class ConfigurationModelInitializationPage extends ModelImporterDetailPage {
 
-	public SetupModelInitializationPage(ModelImporter modelImporter, String pageName) {
+	public ConfigurationModelInitializationPage(ModelImporter modelImporter, String pageName) {
 		super(modelImporter, pageName);
 		showGenModel = false;
 	}

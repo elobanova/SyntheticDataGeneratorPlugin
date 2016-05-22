@@ -16,4 +16,5 @@ Export-Package: com.elobanova.mbdg.model.domain,
  com.elobanova.mbdg.model.xml,
  intermediate,
  intermediate.impl,
- intermediate.util
+ intermediate.util,
+ intermediate.provider

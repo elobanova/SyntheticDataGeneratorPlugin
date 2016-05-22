@@ -6,12 +6,11 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 
-import com.elobanova.mbdg.model.setup.SetupModel;
-import com.elobanova.mbdg.ui.ModelBasedDataGeneratorUIPlugin;
+import intermediate.presentation.GeneratorIntermediateModelEditorPlugin;
 
-public class SetupFileCreationPage extends WizardNewFileCreationPage {
+public class ConfigurationModelFileCreationPage extends WizardNewFileCreationPage {
 
-	public SetupFileCreationPage(String pageId, IStructuredSelection selection) {
+	public ConfigurationModelFileCreationPage(String pageId, IStructuredSelection selection) {
 		super(pageId, selection);
 	}
 
@@ -19,8 +18,8 @@ public class SetupFileCreationPage extends WizardNewFileCreationPage {
 	protected boolean validatePage() {
 		if (super.validatePage()) {
 			String extension = new Path(getFileName()).getFileExtension();
-			if (extension == null || !SetupModel.FILE_EXTENSION.equalsIgnoreCase(extension)) {
-				ModelBasedDataGeneratorUIPlugin.logError(Messages.SetupFileCreationPage_Validate_Page_Error, getShell());
+			if (extension == null || !IntermediateConfigurationModelWizard.FILE_EXTENSIONS.get(0).equalsIgnoreCase(extension)) {
+				GeneratorIntermediateModelEditorPlugin.logError(Messages.ConfigurationFileCreationPage_Validate_Page_Error, getShell());
 				return false;
 			}
 			return true;
