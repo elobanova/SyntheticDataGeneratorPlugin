@@ -38,5 +38,14 @@ public interface EntitiesContainer extends EObject {
 	 * @generated
 	 */
 	EList<GeneratorEntityElement> getEntities();
+	
+	/**
+	 * Returns an entity by a unique type name match
+	 * 
+	 * @param name
+	 *            a name of an entity (type)
+	 * @return an entity with the given type name
+	 */
+	GeneratorEntityElement getEntityByName(String name);
 
 } // EntitiesContainer
