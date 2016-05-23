@@ -3,16 +3,12 @@
 package intermediate.provider;
 
 
-import intermediate.IntermediatePackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -21,6 +17,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+
+import intermediate.GeneratorReference;
+import intermediate.IntermediatePackage;
 
 /**
  * This is the item provider adapter for a {@link intermediate.GeneratorReference} object.
@@ -103,6 +102,10 @@ public class GeneratorReferenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
+		if (object instanceof GeneratorReference) {
+			GeneratorReference reference = (GeneratorReference) object;
+			return reference.getGeneratorEntityElement().getType();
+		}
 		return getString("_UI_GeneratorReference_type");
 	}
 	

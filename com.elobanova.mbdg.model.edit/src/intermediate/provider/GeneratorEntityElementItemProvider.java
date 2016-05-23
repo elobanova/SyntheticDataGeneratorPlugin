@@ -188,7 +188,7 @@ public class GeneratorEntityElementItemProvider
 	@Override
 	public String getText(Object object) {
 		GeneratorEntityElement generatorEntityElement = (GeneratorEntityElement)object;
-		return getString("_UI_GeneratorEntityElement_type") + " " + generatorEntityElement.getCount();
+		return generatorEntityElement.getType();
 	}
 	
 
