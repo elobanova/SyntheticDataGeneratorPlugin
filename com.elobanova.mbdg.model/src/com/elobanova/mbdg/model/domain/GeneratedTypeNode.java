@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author elobanova
  *
  */
-public class GeneratedTypeNode {
+public class GeneratedTypeNode implements IGeneratedType {
 	@XmlAttribute
 	private int count;
 
@@ -40,10 +40,12 @@ public class GeneratedTypeNode {
 	}
 
 	@XmlTransient
+	@Override
 	public String getType() {
 		return this.type;
 	}
 
+	@Override
 	public void setType(String type) {
 		this.type = type;
 	}
