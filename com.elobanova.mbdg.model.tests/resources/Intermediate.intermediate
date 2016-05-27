@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.elobanova.mbdg.intermediate:ModelRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.elobanova.mbdg.intermediate="http://com/elobanova/mbdg/intermediate">
+  <entitiesContainer>
+    <entities type="Account">
+      <idNode name="accountIdNummer" type="long"/>
+      <reference generatorEntityElement="//@entitiesContainer/@entities.2" size="1"/>
+    </entities>
+    <entities type="Customer">
+      <attribute name="firstName" type="java.lang.String"/>
+      <idNode name="id" type="long"/>
+      <reference generatorEntityElement="//@entitiesContainer/@entities.0" size="-1"/>
+    </entities>
+    <entities type="info">
+      <attribute name="maxAllowed" type="double"/>
+      <idNode name="id" type="long"/>
+    </entities>
+    <entities type="Door">
+      <reference generatorEntityElement="//@entitiesContainer/@entities.2" size="90"/>
+    </entities>
+  </entitiesContainer>
+</com.elobanova.mbdg.intermediate:ModelRoot>
