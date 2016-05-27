@@ -25,7 +25,7 @@ public class GeneratedTypeNode implements IGeneratedType {
 	private String consumer;
 
 	@XmlElement(name = "id")
-	private TypedNode idNode;
+	private FieldNode idNode;
 
 	@XmlElement(name = "attribute")
 	private List<FieldNode> attributes;
@@ -64,7 +64,7 @@ public class GeneratedTypeNode implements IGeneratedType {
 		return idNode;
 	}
 
-	public void setIdNode(TypedNode idNode) {
+	public void setIdNode(FieldNode idNode) {
 		this.idNode = idNode;
 	}
 

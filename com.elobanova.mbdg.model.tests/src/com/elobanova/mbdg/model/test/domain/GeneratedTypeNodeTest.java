@@ -70,7 +70,7 @@ public class GeneratedTypeNodeTest {
 
 	@Test
 	public void testGetIdNode() {
-		TypedNode idNode = new TypedNode();
+		FieldNode idNode = new FieldNode();
 		idNode.setName("accountId");
 		entityNode.setIdNode(idNode);
 		TypedNode entitiesId = entityNode.getIdNode();
