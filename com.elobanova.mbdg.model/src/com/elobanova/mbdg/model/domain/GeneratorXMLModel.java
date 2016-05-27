@@ -29,13 +29,13 @@ public class GeneratorXMLModel implements IGeneratorModel {
 		this.rootNode = loadRoot();
 	}
 
-	public void setRootNode(GeneratorRootElement rootNode) {
-		this.rootNode = rootNode;
-	}
-
 	@Override
 	public void setFinalFile(File generatorFile) {
 		this.generatorFile = generatorFile;
+	}
+
+	public void setRootNode(GeneratorRootElement rootNode) {
+		this.rootNode = rootNode;
 	}
 
 	private GeneratorRootElement loadRoot() {
@@ -52,7 +52,7 @@ public class GeneratorXMLModel implements IGeneratorModel {
 
 	@Override
 	public void save() {
-		if (generatorFile != null) {
+		if (generatorFile != null && rootNode != null) {
 			try {
 				resolver.saveRoot(rootNode, generatorFile, GeneratorRootElement.class);
 			} catch (JAXBException e) {

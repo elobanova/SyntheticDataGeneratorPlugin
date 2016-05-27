@@ -51,4 +51,20 @@ public class GeneratorRootElement {
 		return false;
 	}
 
+	public GeneratedTypeNode searchGeneratedTypeNode(String type) {
+		return searchDeep(type, getGeneratedTypes());
+	}
+
+	private GeneratedTypeNode searchDeep(String type, List<GeneratedTypeNode> generatedTypes) {
+		for (GeneratedTypeNode node : generatedTypes) {
+			if (type != null && type.equals(node.getType())) {
+				return node;
+			}
+			GeneratedTypeNode result = searchDeep(type, node.getNestedGeneratedTypes());
+			if (result != null) {
+				return result;
+			}
+		}
+		return null;
+	}
 }

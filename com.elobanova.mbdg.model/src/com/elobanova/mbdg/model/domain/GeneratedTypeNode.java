@@ -39,6 +39,9 @@ public class GeneratedTypeNode implements IGeneratedType {
 		this.count = i;
 	}
 
+	@XmlElement(name = "generate")
+	private List<GeneratedTypeNode> nestedGenerateNodes;
+
 	@XmlTransient
 	@Override
 	public String getType() {
@@ -60,7 +63,7 @@ public class GeneratedTypeNode implements IGeneratedType {
 	}
 
 	@XmlTransient
-	public TypedNode getIdNode() {
+	public FieldNode getIdNode() {
 		return idNode;
 	}
 
@@ -80,6 +83,22 @@ public class GeneratedTypeNode implements IGeneratedType {
 		if (attributeNode.getName() != null && getAttributes().stream()
 				.noneMatch(attribute -> attribute.getName() != null && attribute.getName().equals(attributeNode.getName()))) {
 			return getAttributes().add(attributeNode);
+		}
+		return false;
+	}
+
+	@XmlTransient
+	public List<GeneratedTypeNode> getNestedGeneratedTypes() {
+		if (this.nestedGenerateNodes == null) {
+			this.nestedGenerateNodes = new ArrayList<GeneratedTypeNode>();
+		}
+		return this.nestedGenerateNodes;
+	}
+
+	public boolean addNestedGeneratedType(GeneratedTypeNode generateNode) {
+		if (generateNode.getType() != null && getNestedGeneratedTypes().stream()
+				.noneMatch(generate -> generate.getType() != null && generate.getType().equals(generateNode.getType()))) {
+			return getNestedGeneratedTypes().add(generateNode);
 		}
 		return false;
 	}
