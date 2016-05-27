@@ -814,13 +814,22 @@ public interface IntermediatePackage extends EPackage {
 	int GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_REFERENCE__SIZE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Generator Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATOR_REFERENCE_FEATURE_COUNT = 1;
+	int GENERATOR_REFERENCE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Generator Reference</em>' class.
@@ -1197,6 +1206,17 @@ public interface IntermediatePackage extends EPackage {
 	EReference getGeneratorReference_GeneratorEntityElement();
 
 	/**
+	 * Returns the meta object for the attribute '{@link intermediate.GeneratorReference#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see intermediate.GeneratorReference#getSize()
+	 * @see #getGeneratorReference()
+	 * @generated
+	 */
+	EAttribute getGeneratorReference_Size();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1510,6 +1530,14 @@ public interface IntermediatePackage extends EPackage {
 		 * @generated
 		 */
 		EReference GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT = eINSTANCE.getGeneratorReference_GeneratorEntityElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATOR_REFERENCE__SIZE = eINSTANCE.getGeneratorReference_Size();
 
 	}
 

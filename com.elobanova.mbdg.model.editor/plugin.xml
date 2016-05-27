@@ -20,19 +20,6 @@
          <description>%_UI_IntermediateModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
-            <category
-            id="com.elobanova.mbdg.ui.category.id"
-            name="Synthetic Data Generation Framework">
-      </category>
-      <wizard
-            category="com.elobanova.mbdg.ui.category.id"
-            class="com.elobanova.mbdg.ui.setup.IntermediateConfigurationModelWizard"
-            id="com.elobanova.mbdg.ui.wizard.config.intermediate.id"
-            name="Intermediate Model">
-         <selection
-               class="org.eclipse.core.resources.IResource">
-         </selection>
-      </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">

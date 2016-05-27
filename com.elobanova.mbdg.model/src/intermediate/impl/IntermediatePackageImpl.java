@@ -471,6 +471,15 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGeneratorReference_Size() {
+		return (EAttribute)generatorReferenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IntermediateFactory getIntermediateFactory() {
 		return (IntermediateFactory)getEFactoryInstance();
 	}
@@ -537,6 +546,7 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 
 		generatorReferenceEClass = createEClass(GENERATOR_REFERENCE);
 		createEReference(generatorReferenceEClass, GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT);
+		createEAttribute(generatorReferenceEClass, GENERATOR_REFERENCE__SIZE);
 	}
 
 	/**
@@ -617,6 +627,7 @@ public class IntermediatePackageImpl extends EPackageImpl implements Intermediat
 
 		initEClass(generatorReferenceEClass, GeneratorReference.class, "GeneratorReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeneratorReference_GeneratorEntityElement(), this.getGeneratorEntityElement(), null, "generatorEntityElement", null, 1, 1, GeneratorReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeneratorReference_Size(), ecorePackage.getEInt(), "size", null, 0, 1, GeneratorReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

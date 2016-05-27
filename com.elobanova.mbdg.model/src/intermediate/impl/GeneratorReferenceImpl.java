@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link intermediate.impl.GeneratorReferenceImpl#getGeneratorEntityElement <em>Generator Entity Element</em>}</li>
+ *   <li>{@link intermediate.impl.GeneratorReferenceImpl#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +38,25 @@ public class GeneratorReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected GeneratorEntityElement generatorEntityElement;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SIZE_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected int size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,12 +120,35 @@ public class GeneratorReferenceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(int newSize) {
+		int oldSize = size;
+		size = newSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IntermediatePackage.GENERATOR_REFERENCE__SIZE, oldSize, size));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IntermediatePackage.GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT:
 				if (resolve) return getGeneratorEntityElement();
 				return basicGetGeneratorEntityElement();
+			case IntermediatePackage.GENERATOR_REFERENCE__SIZE:
+				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,6 +163,9 @@ public class GeneratorReferenceImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case IntermediatePackage.GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT:
 				setGeneratorEntityElement((GeneratorEntityElement)newValue);
+				return;
+			case IntermediatePackage.GENERATOR_REFERENCE__SIZE:
+				setSize((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,6 +182,9 @@ public class GeneratorReferenceImpl extends MinimalEObjectImpl.Container impleme
 			case IntermediatePackage.GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT:
 				setGeneratorEntityElement((GeneratorEntityElement)null);
 				return;
+			case IntermediatePackage.GENERATOR_REFERENCE__SIZE:
+				setSize(SIZE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -150,8 +199,26 @@ public class GeneratorReferenceImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case IntermediatePackage.GENERATOR_REFERENCE__GENERATOR_ENTITY_ELEMENT:
 				return generatorEntityElement != null;
+			case IntermediatePackage.GENERATOR_REFERENCE__SIZE:
+				return size != SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (size: ");
+		result.append(size);
+		result.append(')');
+		return result.toString();
 	}
 
 } //GeneratorReferenceImpl

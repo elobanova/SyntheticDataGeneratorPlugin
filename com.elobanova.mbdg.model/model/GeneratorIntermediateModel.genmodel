@@ -48,6 +48,7 @@
     <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//IdNode"/>
     <genClasses ecoreClass="GeneratorIntermediateModel.ecore#//GeneratorReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GeneratorIntermediateModel.ecore#//GeneratorReference/generatorEntityElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GeneratorIntermediateModel.ecore#//GeneratorReference/size"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
