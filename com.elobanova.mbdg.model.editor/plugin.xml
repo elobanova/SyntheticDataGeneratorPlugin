@@ -29,50 +29,6 @@
                class="org.eclipse.core.resources.IResource">
          </selection>
       </wizard>
-      <wizard
-            category="com.elobanova.mbdg.model.editor.category.ID"
-            class="com.elobanova.mbdg.model.editor.NewWizard3"
-            id="com.elobanova.mbdg.model.editor.wizard.generator.ID"
-            name="Generator Model">
-         <selection
-               class="org.eclipse.core.resources.IResource">
-         </selection>
-      </wizard>
-      <wizard
-            category="com.elobanova.mbdg.model.editor.category.ID"
-            class="com.elobanova.mbdg.model.editor.NewWizard3"
-            id="com.elobanova.mbdg.model.editor.wizard.intermediate.ID"
-            name="Generator Model">
-         <selection
-               class="org.eclipse.core.resources.IResource">
-         </selection>
-      </wizard>
-      <wizard
-            category="com.elobanova.mbdg.model.editor.category.ID"
-            class="com.elobanova.mbdg.model.editor.NewWizard3"
-            id="com.elobanova.mbdg.model.editor.wizard3"
-            name="Generator Model">
-         <selection
-               class="org.eclipse.core.resources.IResource">
-         </selection>
-      </wizard>
-      <wizard
-            category="com.elobanova.mbdg.model.editor.category.ID"
-            class="com.elobanova.mbdg.model.editor.NewWizard3"
-            id="com.elobanova.mbdg.model.editor.wizard3"
-            name="name">
-         <selection
-               class="org.eclipse.core.resources.IResource">
-         </selection>
-      </wizard>
-      <wizard
-            class="com.elobanova.mbdg.model.editor.NewWizard3"
-            id="com.elobanova.mbdg.model.editor.wizard3"
-            name="name">
-         <selection
-               class="org.eclipse.core.resources.IResource">
-         </selection>
-      </wizard>
       <!-- @generated GeneratorIntermediateModel -->
    </extension>
 
