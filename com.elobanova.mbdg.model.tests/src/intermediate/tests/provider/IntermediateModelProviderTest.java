@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,15 +26,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.elobanova.mbdg.model.domain.GeneratorXMLModel;
 import com.elobanova.mbdg.model.test.util.ResourceHandler;
 import com.elobanova.mbdg.model.test.util.XMLEqualizer;
 
 import intermediate.ModelRoot;
+import intermediate.presentation.GeneratorIntermediateModelEditorPlugin;
 import intermediate.provider.IntermediateModelProvider;
 
 public class IntermediateModelProviderTest {
 	private IntermediateModelProvider intermediateModelProvider;
+	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(
+			Arrays.asList(GeneratorIntermediateModelEditorPlugin.INSTANCE.getString("_UI_IntermediateEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	@Before
 	public void setUp() throws IOException, URISyntaxException {
@@ -47,9 +51,9 @@ public class IntermediateModelProviderTest {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		IWorkspace workspace = ResourcesPlugin.getWorkspace();
 		IWorkspaceRoot root = workspace.getRoot();
-		File actualFile = root.getRawLocation().append("intermodel").addFileExtension(GeneratorXMLModel.FILE_EXTENSION).toFile();
+		File actualFile = root.getRawLocation().append("intermodel").addFileExtension(FILE_EXTENSIONS.get(0)).toFile();
 		actualFile.createNewFile();
-		URI fileURI = URI.createURI(actualFile.getAbsolutePath(), true);
+		URI fileURI = URI.createFileURI(actualFile.getAbsolutePath());
 		Resource resource = resourceSet.createResource(fileURI);
 		resource.getContents().add(actualModelRoot);
 
